@@ -54,7 +54,7 @@ Opciones para ejecutarlo:
 npx --yes serve . -l 5502
 ```
 
-Abre `http://localhost:5502` y busca recetas por ingrediente.
+Abre `http://localhost:5502` o visita la demo en vivo: https://boatingboat271.github.io/EF-M4-Proyecto-Sprint-2/
 
 ## 🌟 Demo rápida
 

@@ -47,6 +47,8 @@ npm run dev
 
 Aplicacion disponible en `http://localhost:3000`.
 
+Demo en vivo: https://kanban-pro-pablo.onrender.com
+
 ## Endpoints API (base: /api)
 
 ### Auth

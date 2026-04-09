@@ -8,7 +8,7 @@
 
 ## Demo en vivo
 
-🔗 **[Ver demo en vivo](http://localhost:5502)**
+🔗 **[Ver demo en vivo](https://boatingboat271.github.io/EF-M4-Proyecto-Sprint-2/)**
 
 ---
 

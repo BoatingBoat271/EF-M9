@@ -31,8 +31,8 @@ Desarrollador web con foco en JavaScript, React y Node.js. Me apasiona construir
 
 | Proyecto | Descripción | Demo |
 |---|---|---|
-| 🍳 **Buscador de Recetas** | SPA en React que consume una API de recetas para buscar platos por nombre o ingrediente. | [Ver demo](http://localhost:5502) |
-| 📋 **Kanban Pro** | App fullstack de gestión de tareas con tablero Kanban, backend en Node.js y base de datos PostgreSQL. | [Ver demo](http://localhost:3000) |
+| 🍳 **Buscador de Recetas** | SPA en React que consume una API de recetas para buscar platos por nombre o ingrediente. | [Ver demo](https://boatingboat271.github.io/EF-M4-Proyecto-Sprint-2/) |
+| 📋 **Kanban Pro** | App fullstack de gestión de tareas con tablero Kanban, backend en Node.js y base de datos PostgreSQL. | [Ver demo](https://kanban-pro-pablo.onrender.com) |
 
 > 💡 Fijá estos repositorios en tu perfil usando la opción **"Customize your pins"** en tu página de GitHub.
 
@@ -40,7 +40,7 @@ Desarrollador web con foco en JavaScript, React y Node.js. Me apasiona construir
 
 ## 📬 Contacto
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](http://localhost:5501)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://boatingboat271.github.io/EF-M9/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/pablomarelly)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:pablomarelly@gmail.com)
 

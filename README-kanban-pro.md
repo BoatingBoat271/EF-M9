@@ -8,7 +8,7 @@
 
 ## Demo en vivo
 
-🔗 **[Ver demo en vivo](http://localhost:3000)**
+🔗 **[Ver demo en vivo](https://kanban-pro-pablo.onrender.com)**
 
 ---
 
