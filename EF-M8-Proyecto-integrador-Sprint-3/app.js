@@ -5,11 +5,11 @@ const hbs = require('hbs');
 const fs = require('fs');
 const path = require('path');
 const jwt = require('jsonwebtoken');
-const { Tablero, Lista, Tarjeta } = require('./models');
+const { sequelize, Tablero, Lista, Tarjeta } = require('./models');
 const JWT_SECRET = process.env.JWT_SECRET || 'kanbanpro_secret_sprint3';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const apiRoutes = require('./routes/api');
 
 app.set('view engine', 'hbs');
@@ -280,6 +280,17 @@ app.post('/dashboard/tarjetas/:id/eliminar', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log('KanbanPro corriendo en http://localhost:' + PORT);
-});
+async function iniciarServidor() {
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync();
+    app.listen(PORT, () => {
+      console.log('KanbanPro corriendo en puerto ' + PORT);
+    });
+  } catch (error) {
+    console.error('No se pudo iniciar la aplicacion:', error.message);
+    process.exit(1);
+  }
+}
+
+iniciarServidor();
