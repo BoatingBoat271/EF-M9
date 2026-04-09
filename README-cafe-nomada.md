@@ -1,6 +1,6 @@
 # Cafe Nomada
 
-![Cafe Nomada Preview](portfolio/assets/img/hero-cafe-nomada.jpg)
+![Cafe Nomada Preview](portfolio/assets/img/cafe-nomada-demo.svg)
 
 > Landing page para una cafeteria de especialidad, pensada para comunicar marca, ambientacion, menu y canales de contacto en una sola experiencia visual.
 
