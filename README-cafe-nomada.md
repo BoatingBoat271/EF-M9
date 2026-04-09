@@ -12,7 +12,7 @@
 
 ## Repositorio
 
-[Ver codigo en GitHub](https://github.com/BoatingBoat271/Cafeterianomada.git)
+[Ver codigo en GitHub](https://github.com/BoatingBoat271/cafeterianomada)
 
 ---
 
@@ -77,8 +77,8 @@ Este proyecto no requiere dependencias ni proceso de build.
 ### Opcion 1: abrir directamente
 
 ```bash
-git clone https://github.com/BoatingBoat271/Cafeterianomada.git
-cd Cafenomada
+git clone https://github.com/BoatingBoat271/cafeterianomada.git
+cd cafeterianomada
 ```
 
 Luego abre index.html en tu navegador.

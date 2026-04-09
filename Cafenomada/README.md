@@ -66,10 +66,10 @@ No requiere `npm install` ni proceso de build.
 
 ```bash
 # 1) Clonar el repositorio
-git clone https://github.com/BoatingBoat271/Cafeterianomada.git
+git clone https://github.com/BoatingBoat271/cafeterianomada.git
 
 # 2) Entrar al proyecto
-cd Cafenomada
+cd cafeterianomada
 ```
 
 Opciones para ejecutarlo:
