@@ -1,6 +1,6 @@
 # Kanban Pro 📋
 
-![Kanban Pro Demo](https://placehold.co/900x500/1e293b/94a3b8?text=Kanban+Pro+Demo)
+![Kanban Pro Demo](portfolio/assets/img/kanban-pro-demo.svg)
 
 > Aplicación fullstack de gestión de tareas estilo Kanban con tableros, columnas y persistencia de datos en base de datos relacional.
 
