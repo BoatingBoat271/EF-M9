@@ -1,0 +1,26 @@
+{
+  "name": "kanbanpro",
+  "version": "1.0.0",
+  "description": "Aplicacion Kanban con Node.js, Express y Handlebars. Persistencia en PostgreSQL.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "db:create": "node create-db.js",
+    "seed": "node seed.js",
+    "test:crud": "node test-crud.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.4.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

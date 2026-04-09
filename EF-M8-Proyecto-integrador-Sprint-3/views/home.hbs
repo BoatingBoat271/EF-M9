@@ -1,0 +1,89 @@
+{{> header}}
+
+<main class="hero-section d-flex align-items-center">
+  <div class="container text-center py-5">
+    <h1 class="display-2 fw-bold text-white mb-3">KanbanPro</h1>
+    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 560px;">
+      Organiza tu equipo, gestiona tareas y entrega resultados.
+      Tu tablero Kanban con persistencia real, sin complicaciones.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a id="heroDashboardLink" href="/dashboard" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+        Ir al Dashboard
+      </a>
+      <a href="/register" class="btn btn-outline-light btn-lg px-5 rounded-pill">
+        Crear cuenta
+      </a>
+      <a href="/login" class="btn btn-outline-light btn-lg px-5 rounded-pill">
+        Iniciar sesion
+      </a>
+    </div>
+  </div>
+</main>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Por que KanbanPro?</h2>
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold">Tableros visuales</h5>
+          <p class="text-muted mb-0">
+            Organiza tus tareas en columnas Kanban claras:
+            Pendiente, En progreso y Completado.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold">Persistencia real</h5>
+          <p class="text-muted mb-0">
+            Las tarjetas se guardan en PostgreSQL con Sequelize.
+            Sobreviven reinicios y recargas de pagina.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold">Simple y rapido</h5>
+          <p class="text-muted mb-0">
+            Interfaz limpia con Bootstrap.
+            Crea una tarjeta en segundos y fluye.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 cta-section text-white text-center">
+  <div class="container">
+    <h3 class="fw-bold mb-3">Empieza ahora mismo</h3>
+    <p class="text-white-50 mb-4">
+      Accede con tu cuenta y comienza a organizar tus tareas.
+    </p>
+    <a id="ctaDashboardLink" href="/dashboard" class="btn btn-light btn-lg px-5 rounded-pill text-primary fw-bold shadow">
+      Ver tablero Kanban
+    </a>
+  </div>
+</section>
+
+{{> footer}}
+
+<script>
+  (function () {
+    var token = localStorage.getItem('kanbanpro_token');
+    if (!token) return;
+
+    var heroDashboardLink = document.getElementById('heroDashboardLink');
+    var ctaDashboardLink = document.getElementById('ctaDashboardLink');
+    var dashboardUrl = '/dashboard?token=' + encodeURIComponent(token);
+
+    if (heroDashboardLink) heroDashboardLink.href = dashboardUrl;
+    if (ctaDashboardLink) ctaDashboardLink.href = dashboardUrl;
+  })();
+</script>

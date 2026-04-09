@@ -1,0 +1,385 @@
+/* Variables */
+:root {
+  --primary:        #4f46e5;
+  --primary-dark:   #3730a3;
+  --primary-light:  #e0e7ff;
+  --dark:           #1e1e2e;
+  --surface:        #f8fafc;
+  --col-bg:         #f1f5f9;
+  --col-header:     #334155;
+  --text-base:      #1e293b;
+  --text-muted:     #64748b;
+  --border:         #e2e8f0;
+  --shadow-sm:      0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.1);
+  --radius:         0.75rem;
+  --priority-alta-bg:  #fee2e2;
+  --priority-alta-fg:  #991b1b;
+  --priority-media-bg: #fef3c7;
+  --priority-media-fg: #92400e;
+  --priority-baja-bg:  #d1fae5;
+  --priority-baja-fg:  #065f46;
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--surface);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main,
+.auth-wrapper,
+.container-fluid {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 3px solid var(--primary);
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+.brand-icon {
+  margin-right: 4px;
+  color: var(--primary);
+}
+
+.navbar-nav .btn-primary {
+  font-size: 0.88rem;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, #1e1e2e 0%, #312e81 50%, var(--primary) 100%);
+  min-height: 78vh;
+  padding: 80px 0;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-section h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Feature cards */
+.feature-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #312e81 0%, var(--primary) 100%);
+  padding: 4rem 0;
+}
+
+/* Auth */
+.auth-wrapper {
+  min-height: calc(100vh - 142px);
+  background: linear-gradient(160deg, #f0f4ff 0%, #e8f0fe 100%);
+}
+
+.auth-card {
+  border-radius: 1.25rem !important;
+}
+
+.auth-avatar {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.auth-card .form-control,
+.auth-card .form-select {
+  border-radius: 0.6rem;
+  border-color: var(--border);
+  padding: 0.65rem 0.9rem;
+}
+
+.auth-card .form-control:focus,
+.auth-card .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Footer */
+.footer {
+  border-top: 3px solid var(--primary);
+  margin-top: auto;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-secondary {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+/* Dashboard */
+.kanban-board {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  align-items: flex-start;
+  /* Scroll suave en horizontales */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Columna individual */
+.kanban-column {
+  min-width: 285px;
+  max-width: 310px;
+  flex-shrink: 0;
+  background-color: var(--col-bg);
+  border-radius: var(--radius);
+  padding: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary);
+}
+
+/* Encabezado de columna */
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.25rem 0.8rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 0.8rem;
+}
+
+.column-title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--col-header);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.column-count {
+  font-size: 0.72rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+
+/* Contenedor de tarjetas */
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-height: 80px;
+}
+
+/* Tarjeta individual */
+.kanban-card {
+  background: #ffffff;
+  border-radius: 0.65rem;
+  padding: 0.9rem 1rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: default;
+}
+
+.kanban-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.15);
+}
+
+/* Fila superior: tag + prioridad */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.55rem;
+  gap: 0.4rem;
+}
+
+/* Tag de categoría */
+.card-tag {
+  font-size: 0.68rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.card-tag-empty {
+  opacity: 0.5;
+}
+
+/* Prioridad */
+.card-priority {
+  font-size: 0.65rem;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.priority-Alta {
+  background-color: var(--priority-alta-bg);
+  color: var(--priority-alta-fg);
+}
+
+.priority-Media {
+  background-color: var(--priority-media-bg);
+  color: var(--priority-media-fg);
+}
+
+.priority-Baja {
+  background-color: var(--priority-baja-bg);
+  color: var(--priority-baja-fg);
+}
+
+/* Título de la tarjeta */
+.card-title-text {
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-base);
+  line-height: 1.35;
+}
+
+/* Descripción (texto corto) */
+.card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Pie de tarjeta */
+.card-footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  border-top: 1px solid var(--border);
+  padding-top: 0.45rem;
+  margin-top: 0.45rem;
+  gap: 0.5rem;
+}
+
+.card-author,
+.card-date {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Columna vacía */
+.kanban-empty {
+  text-align: center;
+  color: #cbd5e1;
+  padding: 1.75rem 1rem;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  line-height: 1.6;
+}
+
+.kanban-empty p {
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kanban-empty small {
+  font-size: 0.74rem;
+}
+
+/* Formulario de nueva tarjeta */
+#formNuevaTarjeta .card {
+  border: 1px solid var(--primary-light);
+}
+
+#formNuevaTarjeta .form-control,
+#formNuevaTarjeta .form-select {
+  border-color: var(--border);
+  border-radius: 0.55rem;
+}
+
+#formNuevaTarjeta .form-control:focus,
+#formNuevaTarjeta .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .kanban-board {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card .card-body {
+    padding: 2rem 1.5rem !important;
+  }
+}

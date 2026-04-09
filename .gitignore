@@ -1,0 +1,13 @@
+# Nested repo metadata
+**/.git/
+**/.git_backup/
+
+# Node dependencies
+**/node_modules/
+
+# Environment files
+**/.env
+
+# OS/editor noise
+**/.DS_Store
+**/Thumbs.db

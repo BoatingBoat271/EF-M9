@@ -1,0 +1,228 @@
+{{> header}}
+
+<div class="container-fluid py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+    <div>
+      <h2 class="fw-bold mb-0">Tablero de tareas</h2>
+      <p class="text-muted small mb-0">Usuario autenticado: {{usuarioEmail}}</p>
+    </div>
+    <div class="d-flex gap-2">
+      <button
+        class="btn btn-primary rounded-pill"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#formNuevaTarjeta"
+        aria-expanded="false"
+        aria-controls="formNuevaTarjeta"
+      >
+        + Nueva tarjeta
+      </button>
+      <a id="logoutBtn" class="btn btn-outline-secondary rounded-pill" href="/login">Cerrar sesion</a>
+    </div>
+  </div>
+
+  <div class="collapse mb-4 px-2" id="formNuevaTarjeta">
+    <div class="card border-0 shadow-sm rounded-4">
+      <div class="card-body p-4">
+        <h5 class="fw-bold mb-3">Crear nueva tarjeta</h5>
+
+        <form method="POST" action="/dashboard/tarjetas">
+          <input type="hidden" name="token" value="{{token}}" />
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Titulo <span class="text-danger">*</span></label>
+              <input
+                type="text"
+                name="titulo"
+                class="form-control"
+                placeholder="Nombre de la tarea"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Lista destino <span class="text-danger">*</span></label>
+              <select name="listaId" class="form-select" required>
+                {{#each tableros}}
+                  {{#each listas}}
+                    <option value="{{id}}">{{../nombre}} - {{nombre}}</option>
+                  {{/each}}
+                {{/each}}
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-semibold">Descripcion</label>
+              <textarea
+                name="descripcion"
+                class="form-control"
+                rows="2"
+                placeholder="Detalla el trabajo a realizar"
+              ></textarea>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Prioridad</label>
+              <select name="prioridad" class="form-select">
+                <option value="Alta">Alta</option>
+                <option value="Media" selected>Media</option>
+                <option value="Baja">Baja</option>
+              </select>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end gap-2 mt-2">
+              <button
+                type="button"
+                class="btn btn-outline-secondary rounded-pill px-4"
+                data-bs-toggle="collapse"
+                data-bs-target="#formNuevaTarjeta"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn btn-primary rounded-pill px-5">
+                Guardar tarjeta
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {{#if tableros.length}}
+    {{#each tableros}}
+      <section class="mb-5 px-2">
+        <h4 class="fw-bold mb-1">{{nombre}}</h4>
+        <p class="text-muted mb-3">{{descripcion}}</p>
+
+        <div class="kanban-board">
+          {{#each listas}}
+            <div class="kanban-column">
+              <div class="kanban-column-header">
+                <span class="column-title">{{nombre}}</span>
+                <span class="badge bg-secondary column-count">{{tarjetas.length}}</span>
+              </div>
+
+              <div class="kanban-cards">
+                {{#each tarjetas}}
+                  <div class="kanban-card">
+                    <div class="card-top">
+                      <span class="card-tag">Tarjeta</span>
+                      <span class="card-priority priority-{{prioridad}}">{{prioridad}}</span>
+                    </div>
+
+                    <h6 class="card-title-text">{{titulo}}</h6>
+
+                    {{#if descripcion}}
+                      <p class="card-desc">{{descripcion}}</p>
+                    {{/if}}
+
+                    <div class="card-actions d-flex gap-1 mt-2">
+                      <button
+                        class="btn btn-outline-primary btn-sm rounded-pill px-2 py-0"
+                        onclick="abrirEditar({{id}}, '{{titulo}}', '{{descripcion}}', '{{prioridad}}', {{listaId}})"
+                      >Editar</button>
+                      <form method="POST" action="/dashboard/tarjetas/{{id}}/eliminar" style="margin:0">
+                        <input type="hidden" name="token" value="{{../../../token}}" />
+                        <button
+                          type="submit"
+                          class="btn btn-outline-danger btn-sm rounded-pill px-2 py-0"
+                          onclick="return confirm('Eliminar tarjeta?')"
+                        >Eliminar</button>
+                      </form>
+                    </div>
+                  </div>
+                {{else}}
+                  <div class="kanban-empty">
+                    <p>Sin tarjetas aun</p>
+                    <small>Usa el boton Nueva tarjeta para crear una</small>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+    {{/each}}
+  {{else}}
+    <div class="alert alert-info mx-2">
+      No hay tableros para este usuario.
+    </div>
+  {{/if}}
+</div>
+
+<!-- Modal editar tarjeta -->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Editar tarjeta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formEditar" method="POST" action="">
+          <input type="hidden" name="token" value="{{token}}" />
+          <input type="hidden" name="_method" value="PUT" />
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Titulo <span class="text-danger">*</span></label>
+            <input type="text" id="editTitulo" name="titulo" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Descripcion</label>
+            <textarea id="editDescripcion" name="descripcion" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Prioridad</label>
+            <select id="editPrioridad" name="prioridad" class="form-select">
+              <option value="Alta">Alta</option>
+              <option value="Media">Media</option>
+              <option value="Baja">Baja</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Mover a lista</label>
+            <select id="editListaId" name="listaId" class="form-select">
+              {{#each tableros}}
+                {{#each listas}}
+                  <option value="{{id}}">{{../nombre}} - {{nombre}}</option>
+                {{/each}}
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary rounded-pill px-5">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer}}
+
+<script>
+  var logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function () {
+      localStorage.removeItem('kanbanpro_token');
+    });
+  }
+
+  function abrirEditar(id, titulo, descripcion, prioridad, listaId) {
+    var form = document.getElementById('formEditar');
+    form.action = '/dashboard/tarjetas/' + id + '/editar';
+    document.getElementById('editTitulo').value = titulo;
+    document.getElementById('editDescripcion').value = descripcion;
+    document.getElementById('editPrioridad').value = prioridad;
+    document.getElementById('editListaId').value = listaId;
+    var modal = new bootstrap.Modal(document.getElementById('modalEditar'));
+    modal.show();
+  }
+</script>

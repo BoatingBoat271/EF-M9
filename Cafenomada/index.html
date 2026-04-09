@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café Nómada | Cafetería de especialidad</title>
+
+  <meta name="description" content="Café Nómada: cafetería de especialidad, ambiente cálido, pastelería y pedidos para llevar. Reserva o contáctanos." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER + NAVBAR -->
+  <header class="sticky-top">
+   <nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container nav-layout">
+
+    <!-- CONTENEDOR IZQUIERDO -->
+    <div class="brand-box">
+      <a class="navbar-brand brand-link" href="#inicio">
+        <span class="logo-mask">
+          <img src="./assets/img/logo-cafe-nomada.png" alt="Logo Café Nómada">
+        </span>
+        <span class="brand-name">Café Nómada</span>
+      </a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENÚ -->
+    <div class="collapse navbar-collapse nav-grow" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Carta</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="#llevar">Para llevar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resenas">Reseñas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn btn-dark btn-sm" href="#contacto">Reservar</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-overlay">
+        <div class="container py-5">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-8 mx-auto text-white text-center">
+              <h1 class="display-5 fw-bold mb-3">Cafetería de especialidad para tu mejor momento</h1>
+              <p class="lead mb-4">
+                Empieza el día con ese aroma a café recién molido que lo cambia todo.
+                Cuidamos cada detalle para que aquí vivas tu mejor momento: desde la temperatura perfecta
+                hasta la música y el ambiente pensados para conversar, leer o pausar.
+              </p>
+
+              <div class="d-flex flex-wrap gap-2 justify-content-center">
+                <a class="btn btn-light btn-lg" href="#menu">Ver carta</a>
+                <a class="btn btn-warning btn-lg" href="#llevar">Pedir para llevar</a>
+                <a class="btn btn-success btn-lg" href="#contacto">Escribir por WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="py-5 bg-light fade-in">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-12 col-lg-5">
+            <h2 class="fw-bold mb-3">Un lugar cálido para tu pausa</h2>
+            <p class="mb-0 text-secondary">
+              Aquí no improvisamos: trabajamos con granos seleccionados y un tueste pensado para extraer dulzor y aroma.
+              Si te gustan los clásicos, tenemos espresso, americano, capuchino y latte; si prefieres algo más ritual,
+              prueba nuestros filtrados.
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <h3 class="h6 fw-bold">Calibración</h3>
+                  <p class="small mb-0 text-secondary">Molienda, tiempo y temperatura en su punto.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <h3 class="h6 fw-bold">Pastelería</h3>
+                  <p class="small mb-0 text-secondary">Dulces ideales para acompañar.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <h3 class="h6 fw-bold">Ambiente</h3>
+                  <p class="small mb-0 text-secondary">Música amable, wifi y comodidad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ DESTACADO (Cards) -->
+    <section id="menu" class="py-5 fade-in">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="fw-bold mb-1">Menú destacado</h2>
+            <p class="text-secondary mb-0">3-4 opciones para que elijas rápido tu mejor momento.</p>
+          </div>
+          <a class="btn btn-outline-dark" href="#contacto">Reservar</a>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-4">
+              <img src="./assets/img/cafe-latte-art.jpg" class="card-img-top card-img" alt="Espresso" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Espresso</h3>
+                <p class="text-secondary mb-0">Preciso, aromático y con crema estable.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                <span class="fw-bold">$2.200</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-4">
+              <img src="./assets/img/cafe-latte-art.jpg" class="card-img-top card-img" alt="Capuchino" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Capuchino</h3>
+                <p class="text-secondary mb-0">Balance perfecto entre café y leche.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                <span class="fw-bold">$3.200</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-4">
+              <img src="./assets/img/cafe-latte-art.jpg" class="card-img-top card-img" alt="Filtrado" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Filtrado</h3>
+                <p class="text-secondary mb-0">Ritual suave y limpio (pour-over o prensa).</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                <span class="fw-bold">$3.800</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-4">
+              <img src="./assets/img/cafe-latte-art.jpg" class="card-img-top card-img" alt="Dulces" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Café + Dulce</h3>
+                <p class="text-secondary mb-0">El combo ganador para la tarde.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                <span class="fw-bold">$4.900</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALERÍA (Carrusel) -->
+    <section id="galeria" class="py-5 bg-light fade-in">
+      <div class="container">
+        <div class="mb-4">
+          <h2 class="fw-bold mb-1">Galería</h2>
+          <p class="text-secondary mb-0">Un vistazo al ambiente y a los detalles.</p>
+        </div>
+
+        <div id="carouselCafe" class="carousel slide shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselCafe" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselCafe" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselCafe" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/img/galeria-cafe-rustico.jpg" class="d-block w-100 carousel-img" alt="Interior rústico" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/galeria-cafe-libros.jpg" class="d-block w-100 carousel-img" alt="Rincón con libros" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/hero-cafe-nomada.jpg" class="d-block w-100 carousel-img" alt="Café Nómada" loading="lazy">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCafe" data-bs-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCafe" data-bs-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PARA LLEVAR -->
+    <section id="llevar" class="py-5 fade-in">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold mb-2">Para llevar</h2>
+            <p class="text-secondary mb-4">
+              Si andas con prisa, tu café sale con la misma calidad y cariño. Pide por WhatsApp y pasa a retirar.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-dark" href="#contacto">Pedir por WhatsApp</a>
+              <a class="btn btn-outline-dark" href="#ubicacion">Retiro en tienda</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 text-center">
+            <img src="./assets/img/cafe-para-llevar.jpg" class="img-fluid rounded-4 shadow-sm section-img" alt="Café para llevar" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section id="resenas" class="py-5 fade-in">
+      <div class="container">
+        <div class="mb-4">
+          <h2 class="fw-bold mb-1">Reseñas</h2>
+          <p class="text-secondary mb-0">Lo que dice la comunidad.</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <div class="mb-2">⭐⭐⭐⭐⭐</div>
+                <p class="mb-0">“Café impecable y ambiente perfecto para trabajar.”</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <div class="mb-2">⭐⭐⭐⭐⭐</div>
+                <p class="mb-0">“El latte y la galleta, combo ganador.”</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <div class="mb-2">⭐⭐⭐⭐⭐</div>
+                <p class="mb-0">“Rápidos con el pedido para llevar.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO / RESERVA -->
+    <section id="contacto" class="py-5 bg-light fade-in">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold mb-2">Reserva o consulta</h2>
+            <p class="text-secondary mb-3">Completa el formulario y te responderemos pronto.</p>
+
+            <form id="form-contacto" class="bg-white p-4 rounded-4 shadow-sm" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input id="nombre" type="text" class="form-control" placeholder="Tu nombre">
+              </div>
+
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input id="correo" type="email" class="form-control" placeholder="tu@email.com">
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label for="fecha" class="form-label">Fecha</label>
+                  <input id="fecha" type="date" class="form-control">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="personas" class="form-label">Personas</label>
+                  <input id="personas" type="number" class="form-control" min="1" placeholder="1">
+                </div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea id="mensaje" class="form-control" rows="3" placeholder="Comentarios adicionales (opcional)"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-dark w-100">Enviar</button>
+            </form>
+          </div>
+
+          <div class="col-12 col-lg-6" id="ubicacion">
+            <div class="p-4 bg-white rounded-4 shadow-sm">
+              <h3 class="h5 fw-bold mb-2">Horarios y cómo llegar</h3>
+              <p class="text-secondary mb-3">Los Ángeles, Biobío.</p>
+
+              <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>Dirección:</strong> Av. Ricardo Vicuña, Los Ángeles, Biobío, Chile</li>
+                <li class="list-group-item"><strong>Horario:</strong> Lun-Sáb 09:00-20:00 / Dom 10:00-14:00</li>
+                <li class="list-group-item"><strong>WhatsApp:</strong> +56 9 0000 0000</li>
+              </ul>
+
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden border">
+                <iframe id="mapaGoogle" title="Mapa Los Ángeles" loading="lazy"></iframe>
+              </div>
+
+              <a id="btnMaps" class="btn btn-outline-dark w-100 mt-3" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de confirmación Bootstrap -->
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="modalConfirmacionLabel">✓ Mensaje enviado</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0" id="modalMensaje">Gracias por contactarnos. Responderemos pronto.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between align-items-md-center">
+      <p class="mb-0 small">© 2026 Café Nómada.</p>
+      <p class="mb-0 small opacity-75">Café de especialidad • Para llevar • Los Ángeles, Biobío</p>
+      <p class="mb-0 small opacity-75">Desarrollado por <a href="https://pablomarelly.cl" class="text-decoration-none text-white">Pablomarelly</a></p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="btn-top" id="btnTop" aria-label="Volver arriba">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

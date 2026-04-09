@@ -1,0 +1,81 @@
+{{> header}}
+
+<!-- Hero principal -->
+<main class="hero-section d-flex align-items-center">
+  <div class="container text-center py-5">
+    <h1 class="display-2 fw-bold text-white mb-3">KanbanPro</h1>
+    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 560px;">
+      Organiza tu equipo, gestiona tareas y entrega resultados.
+      Tu tablero Kanban con persistencia real, sin complicaciones.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="/dashboard" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+        Ir al Dashboard
+      </a>
+      <a href="/register" class="btn btn-outline-light btn-lg px-5 rounded-pill">
+        Crear cuenta
+      </a>
+      <a href="/login" class="btn btn-outline-light btn-lg px-5 rounded-pill">
+        Iniciar sesión
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- Características -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">¿Por qué KanbanPro?</h2>
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <div class="feature-icon mb-3">📋</div>
+          <h5 class="fw-bold">Tableros visuales</h5>
+          <p class="text-muted mb-0">
+            Organiza tus tareas en columnas Kanban claras:
+            Por hacer, En proceso, Visto bueno y Hecho.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <div class="feature-icon mb-3">💾</div>
+          <h5 class="fw-bold">Persistencia real</h5>
+          <p class="text-muted mb-0">
+            Las tarjetas se guardan en el servidor con Node.js.
+            Sobreviven reinicios y recargas de página.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100">
+          <div class="feature-icon mb-3">⚡</div>
+          <h5 class="fw-bold">Simple y rápido</h5>
+          <p class="text-muted mb-0">
+            Sin base de datos externa, sin configuración compleja.
+            Crea una tarjeta en segundos y fluye.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Llamada a la acción secundaria -->
+<section class="py-5 cta-section text-white text-center">
+  <div class="container">
+    <h3 class="fw-bold mb-3">Empieza ahora mismo</h3>
+    <p class="text-white-50 mb-4">
+      No necesitas una cuenta para usar el dashboard. Accede y comienza a crear tareas.
+    </p>
+    <a href="/dashboard" class="btn btn-light btn-lg px-5 rounded-pill text-primary fw-bold shadow">
+      Ver tablero Kanban
+    </a>
+  </div>
+</section>
+
+{{> footer}}
