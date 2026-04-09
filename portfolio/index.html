@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo | Desarrollador Web</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cinzel:wght@600;700&family=Lato:wght@400;700;900&family=Satisfy&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="nav-logo">Pablo<span class="accent">.</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mi</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-saludo">Diseño web - Marca - estrategia digital</p>
+      <h1 class="hero-nombre">Pablo Marelly</h1>
+      <h2 class="hero-titulo">Desarrollador Web Frontend &amp; Fullstack</h2>
+      <p class="hero-descripcion">
+        Construyo aplicaciones web modernas, funcionales y con buena experiencia de usuario.
+        Apasionado por el código limpio y los proyectos con propósito.
+      </p>
+      <div class="hero-botones">
+        <a href="#proyectos" class="btn btn-primario">🚀 Ver mis proyectos</a>
+        <a href="#contacto" class="btn btn-secundario">✉️ Contactame</a>
+        <a href="https://pablomarelly.cl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">🌐 pablomarelly.cl</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROYECTOS ==================== -->
+  <section id="proyectos" class="seccion">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Proyectos</h2>
+      <p class="seccion-subtitulo">Estos son algunos de los proyectos que construí durante mi formación como desarrollador.</p>
+
+      <div class="proyectos-grid">
+
+        <!-- TARJETA 1: Cafe Nomada -->
+        <article class="proyecto-card">
+          <div class="proyecto-imagen-wrap">
+            <img
+              src="img/Cafenomada.png"
+              alt="Captura de Cafe Nomada"
+              class="proyecto-imagen"
+            />
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-titulo">Cafe Nomada</h3>
+            <p class="proyecto-descripcion">
+              Landing page responsive para una cafeteria, construida con HTML5, Bootstrap 5
+              y JavaScript vanilla. Incluye secciones de menu, galeria, resenas y contacto.
+            </p>
+            <ul class="proyecto-tecnologias">
+              <li><a href="https://www.google.com/search?q=que+es+HTML5" target="_blank" rel="noopener noreferrer">HTML5</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+Bootstrap+5" target="_blank" rel="noopener noreferrer">Bootstrap 5</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+CSS3" target="_blank" rel="noopener noreferrer">CSS3</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
+            </ul>
+            <div class="proyecto-botones">
+              <a href="https://boatingboat271.github.io/cafeterianomada/" target="_blank" rel="noopener noreferrer" class="btn btn-primario">
+                ☕ Ver Demo en Vivo
+              </a>
+              <a href="https://github.com/BoatingBoat271/Cafenomada.git" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                💻 Ver Codigo en GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TARJETA 2: Buscador de Recetas -->
+        <article class="proyecto-card">
+          <div class="proyecto-imagen-wrap">
+            <img
+              src="img/Recetas.png"
+              alt="Captura de Buscador de Recetas"
+              class="proyecto-imagen"
+            />
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-titulo">Buscador de Recetas</h3>
+            <p class="proyecto-descripcion">
+              Aplicación web para buscar recetas por ingrediente usando una API pública.
+              Permite explorar resultados, abrir el detalle de cada plato y revisar ingredientes y preparación.
+            </p>
+            <ul class="proyecto-tecnologias">
+              <li><a href="https://www.google.com/search?q=que+es+HTML5" target="_blank" rel="noopener noreferrer">HTML5</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+CSS3" target="_blank" rel="noopener noreferrer">CSS3</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+Bootstrap+5" target="_blank" rel="noopener noreferrer">Bootstrap 5</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+Fetch+API" target="_blank" rel="noopener noreferrer">Fetch API</a></li>
+            </ul>
+            <div class="proyecto-botones">
+              <a href="http://localhost:5502" target="_blank" rel="noopener noreferrer" class="btn btn-primario">
+                🍳 Ver Demo en Vivo
+              </a>
+              <a href="https://github.com/BoatingBoat271/EF-M4-Proyecto-Sprint-2" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                💻 Ver Codigo en GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TARJETA 3: Kanban Pro -->
+        <article class="proyecto-card">
+          <div class="proyecto-imagen-wrap">
+            <img
+              src="assets/img/kanban-pro.png"
+              alt="Captura de Kanban Pro"
+              class="proyecto-imagen"
+            />
+          </div>
+          <div class="proyecto-info">
+            <h3 class="proyecto-titulo">Kanban Pro</h3>
+            <p class="proyecto-descripcion">
+              Aplicación fullstack de gestión de tareas estilo Kanban. Permite crear tableros,
+              columnas y tarjetas, con persistencia de datos en PostgreSQL y API REST propia.
+            </p>
+            <ul class="proyecto-tecnologias">
+              <li><a href="https://www.google.com/search?q=que+es+React" target="_blank" rel="noopener noreferrer">React</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+Node.js" target="_blank" rel="noopener noreferrer">Node.js</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+Express+js" target="_blank" rel="noopener noreferrer">Express</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+PostgreSQL" target="_blank" rel="noopener noreferrer">PostgreSQL</a></li>
+              <li><a href="https://www.google.com/search?q=que+es+CSS3" target="_blank" rel="noopener noreferrer">CSS3</a></li>
+            </ul>
+            <div class="proyecto-botones">
+              <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer" class="btn btn-primario">
+                📋 Ver Demo en Vivo
+              </a>
+              <a href="https://github.com/BoatingBoat271/EF-M8-Proyecto-integrador-Sprint-3.git" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                💻 Ver Codigo en GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HABILIDADES ==================== -->
+  <section id="habilidades" class="seccion seccion-gris">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Habilidades</h2>
+      <p class="seccion-subtitulo skills-heading">Tecnologías vistas</p>
+      <div class="skills-grid">
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+HTML5" target="_blank" rel="noopener noreferrer">HTML5</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+CSS3" target="_blank" rel="noopener noreferrer">CSS3</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+jQuery" target="_blank" rel="noopener noreferrer">jQuery</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Node.js" target="_blank" rel="noopener noreferrer">Node.js</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Express+js" target="_blank" rel="noopener noreferrer">Express</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Handlebars" target="_blank" rel="noopener noreferrer">Handlebars</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+PostgreSQL" target="_blank" rel="noopener noreferrer">PostgreSQL</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+SQL" target="_blank" rel="noopener noreferrer">SQL</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Sequelize" target="_blank" rel="noopener noreferrer">Sequelize</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+JWT" target="_blank" rel="noopener noreferrer">JWT</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+bcryptjs" target="_blank" rel="noopener noreferrer">bcryptjs</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+express-fileupload" target="_blank" rel="noopener noreferrer">express-fileupload</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Fetch+API" target="_blank" rel="noopener noreferrer">Fetch API</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+XMLHttpRequest+XHR" target="_blank" rel="noopener noreferrer">XMLHttpRequest (XHR)</a>
+      </div>
+
+      <p class="seccion-subtitulo skills-subtitulo skills-heading">Herramientas vistas</p>
+      <div class="skills-grid">
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Visual+Studio+Code" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Git" target="_blank" rel="noopener noreferrer">Git</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+NPM" target="_blank" rel="noopener noreferrer">NPM</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Postman" target="_blank" rel="noopener noreferrer">Postman</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+DBeaver" target="_blank" rel="noopener noreferrer">DBeaver</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+son+DevTools+del+navegador" target="_blank" rel="noopener noreferrer">DevTools del navegador</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Live+Server+VS+Code" target="_blank" rel="noopener noreferrer">Live Server</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+Prettier" target="_blank" rel="noopener noreferrer">Prettier</a>
+        <a class="skill-badge" href="https://www.google.com/search?q=que+es+ESLint" target="_blank" rel="noopener noreferrer">ESLint</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOBRE MÍ ==================== -->
+  <section id="sobre-mi" class="seccion">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Sobre mi</h2>
+      <p class="seccion-texto about-texto">
+        Soy Analista Programador e integrador de tecnologías, con experiencia en seguridad privada desde 2011.
+        He trabajado en instalación y supervisión de sistemas de videovigilancia, control de acceso,
+        automatismos, alarmas, conectividad e innovación tecnológica aplicada a entornos reales.
+      </p>
+      <p class="seccion-texto about-texto">
+        Además, desarrollo propuestas de diseño web, marca y estrategia digital con foco en sitios a medida,
+        experiencia de usuario, SEO, conversión y presencia online. Mi perfil mezcla tecnología, ejecución en terreno,
+        marketing digital y visión estratégica para construir soluciones útiles, claras y orientadas a resultados.
+      </p>
+      <div class="about-grid">
+        <article class="about-card">
+          <h3>Perfil hibrido</h3>
+          <p>Uno programación, electrónica, seguridad tecnológica y comunicación digital en proyectos con aplicación práctica.</p>
+        </article>
+        <article class="about-card">
+          <h3>Experiencia aplicada</h3>
+          <p>He participado en cámaras, alarmas, control de acceso, detección de incendios, energía solar, internet rural y monitoreo.</p>
+        </article>
+        <article class="about-card">
+          <h3>Enfoque estratégico</h3>
+          <p>Trabajo pensando en marca, confianza, posicionamiento y soluciones que realmente resuelvan necesidades concretas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section id="contacto" class="seccion seccion-gris">
+    <div class="contenedor contacto-contenedor">
+      <h2 class="seccion-titulo">Contacto</h2>
+      <p class="seccion-texto">¿Tenés un proyecto en mente o querés hablar sobre trabajo? Escribime.</p>
+      <div class="contacto-links">
+        <a href="mailto:Pablomarelly@gmail.com" class="btn btn-primario">📧 Enviar Email</a>
+        <a href="https://www.linkedin.com/in/pablomarelly/" target="_blank" rel="noopener noreferrer" class="btn btn-secundario">🔗 LinkedIn</a>
+        <a href="https://github.com/boatingboat271" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">🐱 GitHub</a>
+        <a href="https://pablomarelly.cl" target="_blank" rel="noopener noreferrer" class="btn btn-secundario">🌍 Web Personal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>Desarrollado por <strong>Pablo Marelly</strong> · 2026</p>
+  </footer>
+
+</body>
+</html>
