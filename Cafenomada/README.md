@@ -60,19 +60,27 @@ cafenomada/
 
 ---
 
-## 🚀 Uso Local
+## 🚀 Instalacion y uso local
+
+No requiere `npm install` ni proceso de build.
 
 ```bash
-# Clona el repositorio
+# 1) Clonar el repositorio
 git clone https://github.com/BoatingBoat271/Cafeterianomada.git
 
-# Entra al proyecto
+# 2) Entrar al proyecto
 cd Cafenomada
-
-# Abre el archivo index.html en tu navegador
 ```
 
-No requiere instalación ni dependencias — funciona directo desde el navegador.
+Opciones para ejecutarlo:
+
+```bash
+# Opcion A: abrir index.html directamente
+# Opcion B: levantar servidor local (recomendado)
+npx --yes serve . -l 5500
+```
+
+Luego abre `http://localhost:5500`.
 
 ---
 

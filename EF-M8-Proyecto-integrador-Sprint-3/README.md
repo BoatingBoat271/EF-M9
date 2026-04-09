@@ -4,12 +4,13 @@ Proyecto finalizado con autenticacion JWT, API RESTful protegida y dashboard con
 
 ## Requisitos
 
-- Node.js
+- Node.js 18 o superior
 - PostgreSQL activo
-- Archivo .env configurado
+- Archivo `.env` configurado
 
 Variables de entorno minimas:
 
+```env
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=Kanbanpro2
@@ -17,13 +18,34 @@ DB_USER=postgres
 DB_PASSWORD=postgres
 JWT_SECRET=kanbanpro_secret_sprint3
 JWT_EXPIRES_IN=2h
+```
 
 ## Instalacion y ejecucion
 
-1. npm install
-2. npm run db:create
-3. npm run seed
-4. npm run dev
+```bash
+# 1) Clonar el repositorio
+git clone https://github.com/BoatingBoat271/EF-M8-Proyecto-integrador-Sprint-3.git
+
+# 2) Entrar al proyecto
+cd EF-M8-Proyecto-integrador-Sprint-3
+
+# 3) Instalar dependencias
+npm install
+
+# 4) Crear archivo .env desde ejemplo
+copy .env.example .env
+
+# 5) Crear base de datos
+npm run db:create
+
+# 6) Cargar datos de ejemplo
+npm run seed
+
+# 7) Levantar servidor
+npm run dev
+```
+
+Aplicacion disponible en `http://localhost:3000`.
 
 ## Endpoints API (base: /api)
 

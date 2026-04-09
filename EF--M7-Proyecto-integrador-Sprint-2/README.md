@@ -34,8 +34,7 @@ Construir el modelo de datos y probarlo en scripts de Node.js (sin conectar toda
 
 ## Requisitos previos
 
-- Node.js instalado.
-- PostgreSQL instalado y activo.
+- Node.js 18 o superior.
 - PostgreSQL instalado y activo.
 
 Si no tienes `psql` en PATH, puedes crear la base desde Node:
@@ -62,6 +61,13 @@ DB_PASSWORD=postgres
 ## Instalacion
 
 ```bash
+# 1) Clonar el repositorio
+git clone https://github.com/BoatingBoat271/EF--M7-Proyecto-integrador-Sprint-2.git
+
+# 2) Entrar al proyecto
+cd EF--M7-Proyecto-integrador-Sprint-2
+
+# 3) Instalar dependencias
 npm install
 ```
 
