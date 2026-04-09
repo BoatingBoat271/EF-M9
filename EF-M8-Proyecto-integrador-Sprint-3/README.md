@@ -1,141 +1,32 @@
-<h1 align="center">🚀 KanbanPro</h1>
 
-<p align="center">
-  <strong>Gestión de tareas moderna, segura y lista para escalar</strong><br>
-  Plataforma Kanban full-stack con JWT, API REST y dashboard conectado a PostgreSQL.
-</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Estado-Ready%20for%20Demo-22C55E?style=for-the-badge" alt="estado" />
-  <img src="https://img.shields.io/badge/Arquitectura-Full%20Stack-0EA5E9?style=for-the-badge" alt="arquitectura" />
-  <img src="https://img.shields.io/badge/Security-JWT%20Protected-F59E0B?style=for-the-badge" alt="security" />
-</p>
+# 🚀 KanbanPro
 
-<p align="center">
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js"></a>
-  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express-111111?style=flat-square&logo=express&logoColor=white" alt="Express"></a>
-  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"></a>
-  <a href="https://sequelize.org/"><img src="https://img.shields.io/badge/Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white" alt="Sequelize"></a>
-  <a href="https://jwt.io/"><img src="https://img.shields.io/badge/JWT-F59E0B?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"></a>
-</p>
+¡Bienvenido/a a KanbanPro! Este proyecto es una aplicación web de gestión de tareas estilo Kanban, donde puedes organizar tu trabajo, crear tableros, listas y tarjetas, y gestionar tus tareas de manera visual y sencilla.
+
+## 🌐 Acceso directo a la demo
+
+👉 **[Probar KanbanPro en vivo](https://ef-m8-proyecto-integrador-sprint-3.onrender.com/)**
+
+No necesitas instalar nada: simplemente haz clic en el enlace y explora la app. Puedes crear una cuenta, iniciar sesión y probar todas las funcionalidades.
 
 ---
 
-## ✨ ¿Qué hace especial a KanbanPro?
+## ✨ Sobre el proyecto
 
-✅ Resuelve un problema real: organización de trabajo en tableros visuales.  
-✅ Tiene seguridad de nivel profesional con autenticación JWT.  
-✅ Combina backend sólido + frontend funcional en una sola demo.  
-✅ Se puede presentar como MVP académico o base de producto SaaS.
+Este proyecto fue creado como ejercicio de desarrollo web fullstack. Incluye:
 
-> 💡 En pocas palabras: no es solo una API, es una experiencia completa de producto.
-
----
-
-## 🎯 Features destacadas
-
-- 👤 Registro e inicio de sesión de usuarios
-- 🔐 Protección de rutas con Bearer Token
-- 🧩 CRUD completo de Tableros
-- 📚 CRUD completo de Listas por tablero
-- 📝 CRUD completo de Tarjetas por lista
-- 📊 Dashboard con datos reales del usuario autenticado
-- 🗂️ Persistencia relacional en PostgreSQL
+- Registro e inicio de sesión de usuarios
+- Creación y gestión de tableros, listas y tarjetas
+- Seguridad con autenticación JWT
+- Persistencia de datos en PostgreSQL
+- Interfaz visual amigable y responsive
 
 ---
 
-## 🛠 Stack Tecnológico
+## 💡 ¿Por qué KanbanPro?
 
-| Tecnología | Rol en el proyecto |
-|---|---|
-| Node.js | Runtime del servidor |
-| Express | Ruteo, middleware y API HTTP |
-| PostgreSQL | Persistencia de datos |
-| Sequelize | ORM y modelado de entidades |
-| JWT | Autenticación stateless |
-| bcryptjs | Hash seguro de contraseñas |
-| Handlebars (hbs) | Vistas web (login y dashboard) |
-
----
-
-## ⚡ Inicio rápido (60 segundos)
-
-```bash
-npm install
-npm run db:create
-npm run seed
-npm run dev
-```
-
-### 🌐 URLs locales
-
-- Web: http://localhost:3000
-- API: http://localhost:3000/api
-
-### 📦 Scripts disponibles
-
-- npm run start → inicia en producción
-- npm run dev → desarrollo con nodemon
-- npm run db:create → crea la base de datos
-- npm run seed → inserta datos iniciales
-- npm run test:crud → prueba básica CRUD
-
----
-
-## 🔧 Configuración de entorno
-
-Requisitos:
-
-- Node.js 18+
-- PostgreSQL activo
-- Archivo .env en la raíz
-
-Variables de entorno mínimas:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=Kanbanpro2
-DB_USER=postgres
-DB_PASSWORD=postgres
-JWT_SECRET=kanbanpro_secret_sprint3
-JWT_EXPIRES_IN=2h
-```
-
-Tip si ejecutas comandos desde otra carpeta:
-
-```bash
-npm --prefix "c:\\Users\\pablo\\OneDrive\\Documentos\\EF-M8 Proyecto integrador Sprint 3" run dev
-```
-
-## 🚀 Instalación completa
-
-```bash
-# 1) Clonar el repositorio
-git clone https://github.com/BoatingBoat271/EF-M8-Proyecto-integrador-Sprint-3.git
-
-# 2) Entrar al proyecto
-cd EF-M8-Proyecto-integrador-Sprint-3
-
-# 3) Instalar dependencias
-npm install
-
-# 4) Crear archivo .env desde ejemplo
-copy .env.example .env
-
-# 5) Crear base de datos
-npm run db:create
-
-# 6) Cargar datos de ejemplo
-npm run seed
-
-# 7) Levantar servidor
-npm run dev
-```
-
-Aplicación disponible en `http://localhost:3000`.
-
-Demo en vivo: https://kanban-pro-pablo.onrender.com
+KanbanPro es una herramienta útil para equipos y personas que quieren gestionar sus tareas de manera eficiente.
 
 ---
 
